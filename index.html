@@ -145,6 +145,7 @@
     .about-text p { font-size: 0.95rem; color: var(--mid); line-height: 1.85; }
     .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .stat-box { padding: 1.5rem; border: 1px solid rgba(184,151,42,0.2); background: var(--white); }
+    .stat-box.span-full { grid-column: 1 / -1; }
     .stat-number {
       font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300;
       color: var(--gold); line-height: 1; margin-bottom: 0.4rem;
@@ -393,7 +394,7 @@
   <div class="hero-inner">
     <p class="hero-eyebrow" data-en="attorney-at-law · Poznań, Poland · remote · Europe-wide" data-pl="radca prawny · Poznań, Polska · praca zdalna · Europa">attorney-at-law · Poznań, Poland · remote · Europe-wide</p>
     <h1 class="hero-name">Agata<br>Odrobna</h1>
-    <p class="hero-title" data-en="attorney-at-law | Horizon Europe Expert | Legal Operations &amp; AI" data-pl="radca prawny | ekspert Horizon Europe | Legal Operations &amp; AI">attorney-at-law | Horizon Europe Expert | Legal Operations &amp; AI</p>
+    <p class="hero-title" data-en="attorney-at-law | AI in Law | EU Programmes | Compliance" data-pl="radca prawny | AI w prawie | Programy UE | Compliance">attorney-at-law | AI in Law | EU Programmes | Compliance</p>
     <p class="hero-desc" data-en="12+ years bridging complex legal expertise with the demands of innovation. I help organisations navigate compliance, contracts, and EU-funded programmes — and I am actively building skills in Legal Tech and AI to do it smarter." data-pl="Ponad 12 lat łączenia złożonej wiedzy prawnej z potrzebami innowacji. Pomagam organizacjom w zakresie compliance, umów i projektów unijnych — i aktywnie rozwijam kompetencje w Legal Tech i AI.">12+ years bridging complex legal expertise with the demands of innovation. I help organisations navigate compliance, contracts, and EU-funded programmes — and I am actively building skills in Legal Tech and AI to do it smarter.</p>
     <div class="hero-ctas">
       <a href="#download" class="btn-primary" data-en="⬇ Download CV" data-pl="⬇ Pobierz CV">⬇ Download CV</a>
@@ -410,7 +411,7 @@
     <div class="about-grid">
       <div class="about-text">
         <p data-en="I am a qualified attorney-at-law with over 12 years of experience in corporate law, compliance, and EU-funded innovation programmes. My career has been shaped by working at the intersection of law, business strategy, and international programmes — in particular Horizon Europe, where I built expertise from the ground up." data-pl="Jestem radcą prawnym z ponad 12-letnim doświadczeniem w prawie korporacyjnym, compliance i europejskich programach innowacyjnych. Moją karierę kształtuje praca na styku prawa, strategii biznesowej i programów międzynarodowych — szczególnie Horizon Europe, gdzie wiedzę budowałam od podstaw.">I am a qualified attorney-at-law with over 12 years of experience in corporate law, compliance, and EU-funded innovation programmes. My career has been shaped by working at the intersection of law, business strategy, and international programmes — in particular Horizon Europe, where I built expertise from the ground up.</p>
-        <p data-en="I am now intentionally moving toward Legal Tech, Legal Operations, and AI Adoption roles — where I can apply my legal foundation to help organisations work smarter, automate routine processes, and embrace innovation without sacrificing compliance." data-pl="Aktualnie celowo przechodzę w kierunku Legal Tech, Legal Operations i wdrożeń AI — gdzie mogę zastosować fundament prawny do pomagania organizacjom w mądrzejszej pracy, automatyzacji rutynowych procesów i wdrażaniu innowacji.">I am now intentionally moving toward Legal Tech, Legal Operations, and AI Adoption roles — where I can apply my legal foundation to help organisations work smarter, automate routine processes, and embrace innovation without sacrificing compliance.</p>
+        <p data-en="I work at the intersection of law, technology, and business strategy — designing and delivering AI adoption training for organisations, integrating automation into legal processes, and supporting compliance-aware innovation. Legal Operations and Legal Tech are not where I am heading — they are what I do." data-pl="Pracuję na styku prawa, technologii i strategii biznesowej — projektuję i prowadzę szkolenia z wdrożenia AI dla organizacji, wdrażam automatyzację w procesach prawnych i wspieram innowacje zgodne z wymogami prawa. Legal Operations i Legal Tech to nie kierunek, w którym zmierzam — to obszar, w którym działam.">I work at the intersection of law, technology, and business strategy — designing and delivering AI adoption training for organisations, integrating automation into legal processes, and supporting compliance-aware innovation. Legal Operations and Legal Tech are not where I am heading — they are what I do.</p>
         <p data-en="Based in Poznań, Poland · remote · Europe-wide." data-pl="Poznań, Polska · praca zdalna · Europa.">Based in Poznań, Poland · remote · Europe-wide.</p>
       </div>
       <div class="about-stats">
@@ -419,14 +420,18 @@
           <div class="stat-label" data-en="Years of Legal Experience" data-pl="Lat doświadczenia">Years of Legal Experience</div>
         </div>
         <div class="stat-box">
-          <div class="stat-number">50+</div>
-          <div class="stat-label" data-en="Participants per Training Session" data-pl="Uczestników na sesję szkoleniową">Participants per Training Session</div>
+          <div class="stat-number">45</div>
+          <div class="stat-label" data-en="Employees Trained on Data Confidentiality &amp; Security" data-pl="Przeszkolonych pracowników z poufności danych i bezpieczeństwa informacji">Employees Trained on Data Confidentiality &amp; Security</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">15</div>
+          <div class="stat-label" data-en="Professionals Trained in Practical AI Use (10-hour programme)" data-pl="Przeszkolonych specjalistów z praktycznego wykorzystania AI (program 10-godzinny)">Professionals Trained in Practical AI Use (10-hour programme)</div>
         </div>
         <div class="stat-box">
           <div class="stat-number">100+</div>
           <div class="stat-label" data-en="Person International Org · Policies Designed" data-pl="Osobowa org. · Zaprojektowane polityki">Person International Org · Policies Designed</div>
         </div>
-        <div class="stat-box">
+        <div class="stat-box span-full">
           <div class="stat-number">EU</div>
           <div class="stat-label" data-en="Horizon Europe Expert" data-pl="Ekspert Horizon Europe">Horizon Europe Expert</div>
         </div>
@@ -544,8 +549,9 @@
         <div class="skill-item" data-en="AI Adoption &amp; Training" data-pl="Wdrożenia AI i szkolenia">AI Adoption &amp; Training</div>
         <div class="skill-item" data-en="Process Design" data-pl="Projektowanie procesów">Process Design</div>
         <div class="skill-item" data-en="Automation (n8n)" data-pl="Automatyzacja (n8n)">Automation (n8n)</div>
-        <div class="skill-item">Claude · Gemini · OpenAI</div>
+        <div class="skill-item">OpenAI · Claude · Gemini</div>
         <div class="skill-item" data-en="LM Studio (local LLMs)" data-pl="LM Studio (lokalne LLM)">LM Studio (local LLMs)</div>
+        <div class="skill-item" data-en="Claude Code (basics)" data-pl="Claude Code (podstawy)">Claude Code (basics)</div>
       </div>
       <div class="skill-category">
         <p class="skill-cat-title" data-en="Tools" data-pl="Narzędzia">Tools</p>
@@ -688,7 +694,7 @@
       <div class="trait-card">
         <div class="trait-icon">🔭</div>
         <p class="trait-name" data-en="Strategic Thinker" data-pl="Strategiczne myślenie">Strategic Thinker</p>
-        <p class="trait-desc" data-en="ENFJ-T · CliftonStrengths®: Communication, Positivity, Developer, Woo, Responsibility. I connect legal detail with organisational goals and long-term risk." data-pl="ENFJ-T · CliftonStrengths®: Komunikacja, Pozytywność, Rozwój, Woo, Odpowiedzialność. Łączę szczegóły prawne z celami organizacji.">ENFJ-T · CliftonStrengths®: Communication, Positivity, Developer, Woo, Responsibility. I connect legal detail with organisational goals and long-term risk.</p>
+        <p class="trait-desc" data-en="ENFJ-T · CliftonStrengths®: Communication, Positivity, Developer, Woo, Responsibility. I connect legal detail with organisational goals and long-term risk." data-pl="ENFJ-T · CliftonStrengths®: Komunikacja, Optymizm, Rozwijanie innych, Budowanie relacji, Odpowiedzialność. Łączę szczegóły prawne z celami organizacji.">ENFJ-T · CliftonStrengths®: Communication, Positivity, Developer, Woo, Responsibility. I connect legal detail with organisational goals and long-term risk.</p>
       </div>
     </div>
   </div>
@@ -727,7 +733,7 @@
         <span class="ref-quote" style="opacity:0.08">"</span>
         <p class="ref-period">BWHS · 2022</p>
         <p class="ref-role" data-en="Senior attorney-at-law" data-pl="Starszy radca prawny">Senior attorney-at-law</p>
-        <p class="ref-profile" data-en="Senior attorney-at-law and direct supervisor throughout employment 2014–2022 — corporate law specialist, WSE-listed companies. Reference available on request." data-pl="Starszy radca prawny i bezpośredni przełożony przez cały okres zatrudnienia 2014–2022 — specjalista prawa korporacyjnego, spółki notowane na GPW. Referencja dostępna na żądanie.">Senior attorney-at-law and direct supervisor throughout employment 2014–2022 — corporate law specialist, WSE-listed companies. Reference available on request.</p>
+        <p class="ref-profile" data-en="Senior attorney-at-law with 20+ years of experience and direct supervisor throughout employment 2014–2022 — corporate law specialist, WSE-listed companies. Reference available on request." data-pl="Starszy radca prawny z ponad 20-letnim doświadczeniem i bezpośredni przełożony przez cały okres zatrudnienia 2014–2022 — specjalista prawa korporacyjnego, spółki notowane na GPW. Referencja dostępna na żądanie.">Senior attorney-at-law and direct supervisor throughout employment 2014–2022 — corporate law specialist, WSE-listed companies. Reference available on request.</p>
         <div class="ref-divider"></div>
       </div>
 
@@ -737,7 +743,7 @@
     <div class="ref-testimonial-bar">
       <span class="ref-testimonial-icon">"</span>
       <div>
-        <p class="ref-testimonial-quote" data-en="&ldquo;I had been using ChatGPT for years — but this training showed me how much I had been missing.&rdquo;" data-pl="&ldquo;Używałam ChatGPT od lat — ale to szkolenie pokazało mi, ile mi umykało.&rdquo;">&ldquo;I had been using ChatGPT for years — but this training showed me how much I had been missing.&rdquo;</p>
+        <p class="ref-testimonial-quote" data-en="&ldquo;I had been using ChatGPT for years — but this training showed me how much I had been missing.&rdquo;" data-pl="&ldquo;Korzystałem z ChatGPT od lat — ale to szkolenie pokazało mi, ile traciłem.&rdquo;">&ldquo;I had been using ChatGPT for years — but this training showed me how much I had been missing.&rdquo;</p>
         <p class="ref-testimonial-attr" data-en="— Training participant · AI workshop for a transport company team" data-pl="— Uczestnik szkolenia · warsztaty AI dla zespołu firmy transportowej">— Training participant · AI workshop for a transport company team</p>
       </div>
     </div>
