@@ -98,6 +98,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.18rem; font-style: italic; font-weight: 400;
       color: rgba(255,255,255,0.65); margin-bottom: 1.5rem; line-height: 1.6;
+      white-space: nowrap;
     }
     .hero-desc {
       font-size: 0.93rem; line-height: 1.85; color: rgba(255,255,255,0.5);
@@ -363,6 +364,7 @@
     @media (max-width: 600px) {
       .achievements-grid { grid-template-columns: 1fr; }
       .personality-grid { grid-template-columns: 1fr; }
+      .hero-title { white-space: normal; }
     }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
   </style>
