@@ -169,6 +169,11 @@
     .timeline-role { font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; font-weight: 500; color: var(--dark); margin-bottom: 0.3rem; }
     .timeline-company { font-size: 0.82rem; color: var(--muted); margin-bottom: 1rem; }
     .timeline-desc { font-size: 0.95rem; color: var(--mid); line-height: 1.85; }
+    .timeline-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1rem; }
+    .timeline-pillar { border-left: 2px solid rgba(184,151,42,0.18); padding-left: 1rem; }
+    .timeline-pillar-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.25rem; }
+    .timeline-pillar-subtitle { font-size: 0.72rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .timeline-pillar-text { font-size: 0.88rem; color: var(--mid); line-height: 1.75; }
     .tag-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.2rem; }
     .tag {
       padding: 0.2rem 0.7rem; border: 1px solid rgba(184,151,42,0.3);
@@ -354,6 +359,7 @@
       #hero { padding: 7rem 1.5rem 4rem; }
       .hero-photo-panel { display: none; }
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .timeline-pillars { grid-template-columns: 1fr; }
       .achievements-grid { grid-template-columns: 1fr 1fr; }
       .skills-grid { grid-template-columns: 1fr 1fr; }
       .personality-grid { grid-template-columns: 1fr 1fr; }
@@ -394,7 +400,7 @@
     <img src="agata-photo.jpg" alt="Agata Odrobna">
   </div>
   <div class="hero-inner">
-    <p class="hero-eyebrow" data-en="attorney-at-law · Poznań, Poland · remote · Europe-wide" data-pl="radca prawny · Poznań, Polska · praca zdalna · Europa">attorney-at-law · Poznań, Poland · remote · Europe-wide</p>
+    <p class="hero-eyebrow" data-en="attorney-at-law · Poznań, Poland" data-pl="radca prawny · Poznań, Polska">attorney-at-law · Poznań, Poland</p>
     <h1 class="hero-name">Agata<br>Odrobna</h1>
     <p class="hero-title" data-en="attorney-at-law | AI in Law | EU Programmes | Compliance" data-pl="radca prawny | AI w prawie | Programy UE | Compliance">attorney-at-law | AI in Law | EU Programmes | Compliance</p>
     <p class="hero-desc" data-en="12+ years bridging complex legal expertise with the demands of innovation. I help organisations navigate compliance, contracts, and EU-funded programmes — and I am actively building skills in Legal Tech and AI to do it smarter." data-pl="Ponad 12 lat łączenia złożonej wiedzy prawnej z potrzebami innowacji. Pomagam organizacjom w zakresie compliance, umów i projektów unijnych — i aktywnie rozwijam kompetencje w Legal Tech i AI.">12+ years bridging complex legal expertise with the demands of innovation. I help organisations navigate compliance, contracts, and EU-funded programmes — and I am actively building skills in Legal Tech and AI to do it smarter.</p>
@@ -414,7 +420,7 @@
       <div class="about-text">
         <p data-en="I am a qualified attorney-at-law with over 12 years of experience in corporate law, compliance, and EU-funded innovation programmes. My career has been shaped by working at the intersection of law, business strategy, and international programmes — in particular Horizon Europe, where I built expertise from the ground up." data-pl="Jestem radcą prawnym z ponad 12-letnim doświadczeniem w prawie korporacyjnym, compliance i europejskich programach innowacyjnych. Moją karierę kształtuje praca na styku prawa, strategii biznesowej i programów międzynarodowych — szczególnie Horizon Europe, gdzie wiedzę budowałam od podstaw.">I am a qualified attorney-at-law with over 12 years of experience in corporate law, compliance, and EU-funded innovation programmes. My career has been shaped by working at the intersection of law, business strategy, and international programmes — in particular Horizon Europe, where I built expertise from the ground up.</p>
         <p data-en="I work at the intersection of law, technology, and business strategy — designing and delivering AI adoption training for organisations, integrating automation into legal processes, and supporting compliance-aware innovation. Legal Operations and Legal Tech are not where I am heading — they are what I do." data-pl="Pracuję na styku prawa, technologii i strategii biznesowej — projektuję i prowadzę szkolenia z wdrożenia AI dla organizacji, wdrażam automatyzację w procesach prawnych i wspieram innowacje zgodne z wymogami prawa. Legal Operations i Legal Tech to nie kierunek, w którym zmierzam — to obszar, w którym działam.">I work at the intersection of law, technology, and business strategy — designing and delivering AI adoption training for organisations, integrating automation into legal processes, and supporting compliance-aware innovation. Legal Operations and Legal Tech are not where I am heading — they are what I do.</p>
-        <p data-en="Based in Poznań, Poland · remote · Europe-wide." data-pl="Poznań, Polska · praca zdalna · Europa.">Based in Poznań, Poland · remote · Europe-wide.</p>
+        <p data-en="Based in Poznań, Poland." data-pl="Poznań, Polska.">Based in Poznań, Poland.</p>
       </div>
       <div class="about-stats">
         <div class="stat-box">
@@ -450,10 +456,23 @@
     <div class="timeline">
 
       <div class="timeline-item">
-        <p class="timeline-period">2022 – Present</p>
+        <p class="timeline-period" data-en="August 2022 – Present" data-pl="sierpień 2022 – obecnie">August 2022 – Present</p>
         <h3 class="timeline-role" data-en="Legal Coordinator – Corporate Governance &amp; Compliance Lead" data-pl="Koordynator Prawny – Corporate Governance &amp; Compliance">Legal Coordinator – Corporate Governance &amp; Compliance Lead</h3>
-        <p class="timeline-company">FundingBox Accelerator · Remote</p>
-        <p class="timeline-desc" data-en="Led legal operations across Horizon Europe innovation programmes (€2–4M budgets) — covering contracts, corporate governance, compliance, and the design and delivery of AI and legal training for ~45 employees, while progressively integrating AI tools into day-to-day legal practice." data-pl="Kierowanie operacjami prawnymi w ramach projektów innowacyjnych Horizon Europe (budżety €2–4M) — obsługa umów, ładu korporacyjnego, compliance oraz projektowanie i prowadzenie szkoleń z AI i prawa dla ~45 pracowników, z równoczesnym wdrażaniem narzędzi AI do codziennej praktyki prawniczej.">Led legal operations across Horizon Europe innovation programmes (€2–4M budgets) — covering contracts, corporate governance, compliance, and the design and delivery of AI and legal training for ~45 employees, while progressively integrating AI tools into day-to-day legal practice.</p>
+        <p class="timeline-company">FundingBox Accelerator</p>
+        <div class="timeline-pillars">
+          <div class="timeline-pillar">
+            <p class="timeline-pillar-title" data-en="Horizon Europe" data-pl="Horizon Europe">Horizon Europe</p>
+            <p class="timeline-pillar-text" data-en="Managed legal aspects of Horizon Europe projects (€2–4M budgets), supporting deep-tech startups and innovators. Negotiated and drafted grant agreements, NDAs and contractor agreements. Supported tender and proposal processes for compliance with funder requirements." data-pl="Prowadzenie aspektów prawnych projektów Horizon Europe o budżetach €2–4M, wsparcie startupów deep-tech i innowatorów. Negocjowanie i zawieranie umów grantowych, NDA oraz umów z wykonawcami. Wsparcie procesów przetargowych i ofertowych pod kątem zgodności z wymogami instytucji finansujących.">Managed legal aspects of Horizon Europe projects (€2–4M budgets), supporting deep-tech startups and innovators. Negotiated and drafted grant agreements, NDAs and contractor agreements. Supported tender and proposal processes for compliance with funder requirements.</p>
+          </div>
+          <div class="timeline-pillar">
+            <p class="timeline-pillar-title" data-en="Corporate Governance" data-pl="Ład korporacyjny / rejestracje">Corporate Governance</p>
+            <p class="timeline-pillar-text" data-en="Prepared corporate documentation for shareholders' meetings (resolutions, minutes) and filed with the National Court Register (KRS) — fulfilling registration obligations for sp. z o.o., including management board changes. Powers of attorney, board meeting minutes, day-to-day corporate administration." data-pl="Przygotowywanie dokumentacji korporacyjnej związanej ze zgromadzeniami wspólników (uchwały, protokoły) oraz jej składanie do KRS — dopełnianie obowiązków rejestracyjnych spółki z o.o., w tym zmian w zarządzie i innych zmian korporacyjnych. Pełnomocnictwa, protokoły z posiedzeń organów, bieżąca obsługa korporacyjna.">Prepared corporate documentation for shareholders' meetings (resolutions, minutes) and filed with the National Court Register (KRS) — fulfilling registration obligations for sp. z o.o., including management board changes. Powers of attorney, board meeting minutes, day-to-day corporate administration.</p>
+          </div>
+          <div class="timeline-pillar">
+            <p class="timeline-pillar-title" data-en="Policies &amp; Training" data-pl="Polityki i szkolenia">Policies &amp; Training</p>
+            <p class="timeline-pillar-text" data-en="Built internal policies from scratch — information security and data confidentiality, conflict of interest, and business ethics — and delivered training for approximately 45 employees on these policies and related legal requirements, including AI compliance elements." data-pl="Tworzenie od zera wewnętrznych polityk (przede wszystkim polityki bezpieczeństwa informacji i poufności danych, konfliktu interesów, etyki biznesowej) oraz prowadzenie szkoleń dla ok. 45 pracowników z zakresu tych polityk i związanych z nimi przepisów prawa (w tym elementy AI w compliance).">Built internal policies from scratch — information security and data confidentiality, conflict of interest, and business ethics — and delivered training for approximately 45 employees on these policies and related legal requirements, including AI compliance elements.</p>
+          </div>
+        </div>
         <div class="tag-list">
           <span class="tag">Horizon Europe</span>
           <span class="tag">Legal Operations</span>
@@ -464,25 +483,30 @@
       </div>
 
       <div class="timeline-item">
-        <p class="timeline-period">2021 – 2022</p>
-        <h3 class="timeline-role" data-en="attorney-at-law" data-pl="radca prawny">attorney-at-law</h3>
-        <p class="timeline-company">BWHS Wojciechowski Springer i Wspólnicy sp.k. · Poznań</p>
-        <p class="timeline-desc" data-en="Advised and represented large finance-sector clients as a fully licensed attorney-at-law — commercial litigation, corporate documentation, and National Register filings." data-pl="Doradztwo i reprezentacja dużych klientów z sektora finansowego jako radca prawny — postępowania sądowe, dokumentacja korporacyjna i wpisy do KRS.">Advised and represented large finance-sector clients as a fully licensed attorney-at-law — commercial litigation, corporate documentation, and National Register filings.</p>
+        <p class="timeline-period">2014 – 2022</p>
+        <h3 class="timeline-role">BWHS Wojciechowski Springer i Wspólnicy sp.k.</h3>
+        <p class="timeline-company">Poznań</p>
+        <div class="timeline-pillars">
+          <div class="timeline-pillar">
+            <p class="timeline-pillar-title" data-en="Attorney-at-law" data-pl="Radca prawny">Attorney-at-law</p>
+            <p class="timeline-pillar-subtitle" data-en="Sept 2021 – April 2022" data-pl="wrzesień 2021 – kwiecień 2022">Sept 2021 – April 2022</p>
+            <p class="timeline-pillar-text" data-en="Legal representation of large finance-sector clients — negotiating settlements, drafting statements of claim, defence submissions and other procedural documents. Prepared corporate documentation (company registrations, corporate changes, shareholder resolutions, KRS filings). Conducted and supported commercial court proceedings as attorney of record. Monitored legislative changes and edited the team's internal newsletter." data-pl="Obsługa prawna dużych klientów z sektora finansowego — negocjowanie ugód, sporządzanie pozwów, odpowiedzi na pozwy i innych pism procesowych. Przygotowywanie dokumentacji korporacyjnej (rejestracje spółek, zmiany korporacyjne, uchwały wspólników, zgłoszenia do KRS). Prowadzenie i wspieranie postępowań sądowych gospodarczych jako pełnomocnik. Monitorowanie zmian legislacyjnych i redagowanie wewnętrznego newslettera dla zespołu.">Legal representation of large finance-sector clients — negotiating settlements, drafting statements of claim, defence submissions and other procedural documents. Prepared corporate documentation (company registrations, corporate changes, shareholder resolutions, KRS filings). Conducted and supported commercial court proceedings as attorney of record. Monitored legislative changes and edited the team's internal newsletter.</p>
+          </div>
+          <div class="timeline-pillar">
+            <p class="timeline-pillar-title" data-en="Trainee Attorney-at-law" data-pl="Aplikant radcowski">Trainee Attorney-at-law</p>
+            <p class="timeline-pillar-subtitle" data-en="Nov 2016 – Aug 2021" data-pl="listopad 2016 – sierpień 2021">Nov 2016 – Aug 2021</p>
+            <p class="timeline-pillar-text" data-en="Prepared corporate documentation for KRS registrations and amendments. Drafted and reviewed contracts, legal opinions, and procedural documents across civil, commercial, labour and IP law. Analysed regulatory and contractual issues for team recommendations. Polish–English translations of legal documents and correspondence." data-pl="Przygotowywanie dokumentacji korporacyjnej dot. rejestracji i zmian w KRS. Sporządzanie i opiniowanie umów, opinii prawnych oraz pism procesowych z zakresu prawa cywilnego, gospodarczego, pracy i IP. Analiza zagadnień regulacyjnych i kontraktowych na potrzeby rekomendacji dla zespołu. Tłumaczenia polsko-angielskie dokumentów prawnych i korespondencji.">Prepared corporate documentation for KRS registrations and amendments. Drafted and reviewed contracts, legal opinions, and procedural documents across civil, commercial, labour and IP law. Analysed regulatory and contractual issues for team recommendations. Polish–English translations of legal documents and correspondence.</p>
+          </div>
+          <div class="timeline-pillar">
+            <p class="timeline-pillar-title" data-en="Office Manager" data-pl="Office Manager">Office Manager</p>
+            <p class="timeline-pillar-subtitle" data-en="May 2014 – Oct 2016" data-pl="maj 2014 – październik 2016">May 2014 – Oct 2016</p>
+            <p class="timeline-pillar-text" data-en="First practical legal role while still studying — coordinating document workflow and direct Polish–English communication with the firm's clients and attorneys." data-pl="Pierwsza praktyczna rola prawna jeszcze w trakcie studiów — koordynacja obiegu dokumentów oraz bezpośrednia komunikacja polsko-angielska z klientami i prawnikami kancelarii.">First practical legal role while still studying — coordinating document workflow and direct Polish–English communication with the firm's clients and attorneys.</p>
+          </div>
+        </div>
         <div class="tag-list">
           <span class="tag">Corporate Law</span>
           <span class="tag">Commercial Litigation</span>
           <span class="tag">Employment Law</span>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <p class="timeline-period">2014 – 2021</p>
-        <h3 class="timeline-role" data-en="Trainee attorney-at-law &amp; Office Manager" data-pl="Aplikant radcowski &amp; Office Manager">Trainee attorney-at-law &amp; Office Manager</h3>
-        <p class="timeline-company">BWHS Wojciechowski Springer i Wspólnicy sp.k. · Poznań</p>
-        <p class="timeline-desc" data-en="Seven years at BWHS across roles from office administration to qualified attorney-at-law — completing the OIRP Poznań apprenticeship (2017–2019), gaining hands-on experience in corporate, commercial, labour, and IP law, and completing a supervised internship at Poznań City Hall." data-pl="Siedem lat w BWHS, od zarządzania biurem po uprawnienia radcy prawnego — ukończenie aplikacji radcowskiej OIRP Poznań (2017–2019), praktyczne doświadczenie w prawie korporacyjnym, handlowym, pracy i IP, oraz nadzorowany staż w Urzędzie Miasta Poznania.">Seven years at BWHS across roles from office administration to qualified attorney-at-law — completing the OIRP Poznań apprenticeship (2017–2019), gaining hands-on experience in corporate, commercial, labour, and IP law, and completing a supervised internship at Poznań City Hall.</p>
-        <div class="tag-list">
-          <span class="tag">Corporate Law</span>
-          <span class="tag">Legal Research</span>
           <span class="tag">Legal Training (OIRP)</span>
         </div>
       </div>
@@ -780,7 +804,7 @@
         </a>
         <div class="contact-item">
           <div class="contact-item-icon">📍</div>
-          <span data-en="Poznań, Poland · remote · Europe-wide" data-pl="Poznań, Polska · praca zdalna · Europa">Poznań, Poland · remote · Europe-wide</span>
+          <span data-en="Poznań, Poland" data-pl="Poznań, Polska">Poznań, Poland</span>
         </div>
       </div>
       <form id="contact-form" class="contact-form">
