@@ -151,7 +151,12 @@
       font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300;
       color: var(--gold); line-height: 1; margin-bottom: 0.4rem;
     }
+    .stat-number-sm {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 400;
+      font-style: italic; color: var(--gold); line-height: 1.25; margin-bottom: 0.4rem;
+    }
     .stat-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .stat-desc { font-size: 0.72rem; color: var(--muted); line-height: 1.45; }
 
     /* ── EXPERIENCE ── */
     #experience { background: var(--white); }
@@ -373,6 +378,29 @@
       .hero-title { white-space: normal; }
     }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
+
+    /* ── FAQ ── */
+    #faq { background: var(--off-white); }
+    .faq-list { display: flex; flex-direction: column; }
+    .faq-item { border-bottom: 1px solid rgba(184,151,42,0.15); }
+    .faq-item:first-child { border-top: 1px solid rgba(184,151,42,0.15); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      padding: 1.1rem 0; text-align: left; gap: 1.5rem;
+      font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500;
+      color: var(--dark); transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--gold); }
+    .faq-chevron { flex-shrink: 0; font-size: 1rem; color: var(--gold); transition: transform 0.25s; margin-top: 0.1rem; }
+    .faq-item.open .faq-chevron { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-item.open .faq-answer { max-height: 3000px; }
+    .faq-answer-inner { padding-bottom: 1.2rem; font-size: 0.88rem; color: var(--mid); line-height: 1.8; }
+    .faq-answer-inner p + p { margin-top: 0.5rem; }
+    .faq-answer-inner ul { margin: 0.4rem 0 0 1.4rem; }
+    .faq-answer-inner li { margin-bottom: 0.15rem; }
+    .lang-pl { display: none; }
   </style>
 </head>
 <body>
@@ -386,6 +414,7 @@
     <li><a href="#skills" data-en="Skills" data-pl="Umiejętności">Skills</a></li>
     <li><a href="#certificates" data-en="Certificates" data-pl="Certyfikaty">Certificates</a></li>
     <li><a href="#references" data-en="References" data-pl="Referencje">References</a></li>
+    <li><a href="#faq" data-en="FAQ" data-pl="FAQ">FAQ</a></li>
     <li><a href="#contact" data-en="Contact" data-pl="Kontakt">Contact</a></li>
   </ul>
   <div class="lang-toggle">
@@ -428,12 +457,12 @@
           <div class="stat-label" data-en="Years of Legal Experience" data-pl="Lat doświadczenia">Years of Legal Experience</div>
         </div>
         <div class="stat-box">
-          <div class="stat-number">45</div>
-          <div class="stat-label" data-en="Employees Trained on Data Confidentiality &amp; Security" data-pl="Przeszkolonych pracowników z poufności danych i bezpieczeństwa informacji">Employees Trained on Data Confidentiality &amp; Security</div>
+          <div class="stat-number-sm" data-en="1 training, 45 participants" data-pl="1 szkolenie, 45 uczestników">1 training, 45 participants</div>
+          <div class="stat-desc" data-en="full success in training on data confidentiality and security" data-pl="pełny sukces w zakresie przeszkolenia z poufności danych i bezpieczeństwa">full success in training on data confidentiality and security</div>
         </div>
         <div class="stat-box">
-          <div class="stat-number">15</div>
-          <div class="stat-label" data-en="Professionals Trained in Practical AI Use (10-hour programme)" data-pl="Przeszkolonych specjalistów z praktycznego wykorzystania AI (program 10-godzinny)">Professionals Trained in Practical AI Use (10-hour programme)</div>
+          <div class="stat-number">5/5</div>
+          <div class="stat-desc" data-en="15 participants trained in practical AI use" data-pl="15 uczestników przeszkolonych w praktycznym wykorzystaniu AI">15 participants trained in practical AI use</div>
         </div>
         <div class="stat-box">
           <div class="stat-number">100+</div>
@@ -456,13 +485,13 @@
     <div class="timeline">
 
       <div class="timeline-item">
-        <p class="timeline-period" data-en="August 2022 – Present" data-pl="sierpień 2022 – obecnie">August 2022 – Present</p>
-        <h3 class="timeline-role" data-en="Legal Coordinator – Corporate Governance &amp; Compliance Lead" data-pl="Koordynator Prawny – Corporate Governance &amp; Compliance">Legal Coordinator – Corporate Governance &amp; Compliance Lead</h3>
+        <p class="timeline-period" data-en="August 2022 - Present" data-pl="sierpień 2022 - obecnie">August 2022 - Present</p>
+        <h3 class="timeline-role" data-en="Legal Coordinator - Corporate Governance &amp; Compliance Lead" data-pl="Koordynator Prawny - Corporate Governance &amp; Compliance">Legal Coordinator - Corporate Governance &amp; Compliance Lead</h3>
         <p class="timeline-company">FundingBox Accelerator</p>
         <div class="timeline-pillars">
           <div class="timeline-pillar">
             <p class="timeline-pillar-title" data-en="Horizon Europe" data-pl="Horizon Europe">Horizon Europe</p>
-            <p class="timeline-pillar-text" data-en="Managed legal aspects of Horizon Europe projects (€2–4M budgets), supporting deep-tech startups and innovators. Negotiated and drafted grant agreements, NDAs and contractor agreements. Supported tender and proposal processes for compliance with funder requirements." data-pl="Prowadzenie aspektów prawnych projektów Horizon Europe o budżetach €2–4M, wsparcie startupów deep-tech i innowatorów. Negocjowanie i zawieranie umów grantowych, NDA oraz umów z wykonawcami. Wsparcie procesów przetargowych i ofertowych pod kątem zgodności z wymogami instytucji finansujących.">Managed legal aspects of Horizon Europe projects (€2–4M budgets), supporting deep-tech startups and innovators. Negotiated and drafted grant agreements, NDAs and contractor agreements. Supported tender and proposal processes for compliance with funder requirements.</p>
+            <p class="timeline-pillar-text" data-en="Managed legal aspects of Horizon Europe projects (€2-4M budgets), supporting deep-tech startups and innovators. Negotiated and drafted grant agreements, NDAs and contractor agreements. Supported tender and proposal processes for compliance with funder requirements." data-pl="Prowadzenie aspektów prawnych projektów Horizon Europe o budżetach €2-4M, wsparcie startupów deep-tech i innowatorów. Negocjowanie i zawieranie umów grantowych, NDA oraz umów z wykonawcami. Wsparcie procesów przetargowych i ofertowych pod kątem zgodności z wymogami instytucji finansujących.">Managed legal aspects of Horizon Europe projects (€2-4M budgets), supporting deep-tech startups and innovators. Negotiated and drafted grant agreements, NDAs and contractor agreements. Supported tender and proposal processes for compliance with funder requirements.</p>
           </div>
           <div class="timeline-pillar">
             <p class="timeline-pillar-title" data-en="Corporate Governance" data-pl="Ład korporacyjny / rejestracje">Corporate Governance</p>
@@ -483,24 +512,24 @@
       </div>
 
       <div class="timeline-item">
-        <p class="timeline-period">2014 – 2022</p>
+        <p class="timeline-period">2014 - 2022</p>
         <h3 class="timeline-role">BWHS Wojciechowski Springer i Wspólnicy sp.k.</h3>
         <p class="timeline-company">Poznań</p>
         <div class="timeline-pillars">
           <div class="timeline-pillar">
             <p class="timeline-pillar-title" data-en="Attorney-at-law" data-pl="Radca prawny">Attorney-at-law</p>
-            <p class="timeline-pillar-subtitle" data-en="Sept 2021 – April 2022" data-pl="wrzesień 2021 – kwiecień 2022">Sept 2021 – April 2022</p>
+            <p class="timeline-pillar-subtitle" data-en="Sept 2021 - April 2022" data-pl="wrzesień 2021 - kwiecień 2022">Sept 2021 - April 2022</p>
             <p class="timeline-pillar-text" data-en="Legal representation of large finance-sector clients — negotiating settlements, drafting statements of claim, defence submissions and other procedural documents. Prepared corporate documentation (company registrations, corporate changes, shareholder resolutions, KRS filings). Conducted and supported commercial court proceedings as attorney of record. Monitored legislative changes and edited the team's internal newsletter." data-pl="Obsługa prawna dużych klientów z sektora finansowego — negocjowanie ugód, sporządzanie pozwów, odpowiedzi na pozwy i innych pism procesowych. Przygotowywanie dokumentacji korporacyjnej (rejestracje spółek, zmiany korporacyjne, uchwały wspólników, zgłoszenia do KRS). Prowadzenie i wspieranie postępowań sądowych gospodarczych jako pełnomocnik. Monitorowanie zmian legislacyjnych i redagowanie wewnętrznego newslettera dla zespołu.">Legal representation of large finance-sector clients — negotiating settlements, drafting statements of claim, defence submissions and other procedural documents. Prepared corporate documentation (company registrations, corporate changes, shareholder resolutions, KRS filings). Conducted and supported commercial court proceedings as attorney of record. Monitored legislative changes and edited the team's internal newsletter.</p>
           </div>
           <div class="timeline-pillar">
             <p class="timeline-pillar-title" data-en="Trainee Attorney-at-law" data-pl="Aplikant radcowski">Trainee Attorney-at-law</p>
-            <p class="timeline-pillar-subtitle" data-en="Nov 2016 – Aug 2021" data-pl="listopad 2016 – sierpień 2021">Nov 2016 – Aug 2021</p>
-            <p class="timeline-pillar-text" data-en="Prepared corporate documentation for KRS registrations and amendments. Drafted and reviewed contracts, legal opinions, and procedural documents across civil, commercial, labour and IP law. Analysed regulatory and contractual issues for team recommendations. Polish–English translations of legal documents and correspondence." data-pl="Przygotowywanie dokumentacji korporacyjnej dot. rejestracji i zmian w KRS. Sporządzanie i opiniowanie umów, opinii prawnych oraz pism procesowych z zakresu prawa cywilnego, gospodarczego, pracy i IP. Analiza zagadnień regulacyjnych i kontraktowych na potrzeby rekomendacji dla zespołu. Tłumaczenia polsko-angielskie dokumentów prawnych i korespondencji.">Prepared corporate documentation for KRS registrations and amendments. Drafted and reviewed contracts, legal opinions, and procedural documents across civil, commercial, labour and IP law. Analysed regulatory and contractual issues for team recommendations. Polish–English translations of legal documents and correspondence.</p>
+            <p class="timeline-pillar-subtitle" data-en="Nov 2016 - Aug 2021" data-pl="listopad 2016 - sierpień 2021">Nov 2016 - Aug 2021</p>
+            <p class="timeline-pillar-text" data-en="Prepared corporate documentation for KRS registrations and amendments. Drafted and reviewed contracts, legal opinions, and procedural documents across civil, commercial, labour and IP law. Analysed regulatory and contractual issues for team recommendations. Polish-English translations of legal documents and correspondence." data-pl="Przygotowywanie dokumentacji korporacyjnej dot. rejestracji i zmian w KRS. Sporządzanie i opiniowanie umów, opinii prawnych oraz pism procesowych z zakresu prawa cywilnego, gospodarczego, pracy i IP. Analiza zagadnień regulacyjnych i kontraktowych na potrzeby rekomendacji dla zespołu. Tłumaczenia polsko-angielskie dokumentów prawnych i korespondencji.">Prepared corporate documentation for KRS registrations and amendments. Drafted and reviewed contracts, legal opinions, and procedural documents across civil, commercial, labour and IP law. Analysed regulatory and contractual issues for team recommendations. Polish-English translations of legal documents and correspondence.</p>
           </div>
           <div class="timeline-pillar">
             <p class="timeline-pillar-title" data-en="Office Manager" data-pl="Office Manager">Office Manager</p>
-            <p class="timeline-pillar-subtitle" data-en="May 2014 – Oct 2016" data-pl="maj 2014 – październik 2016">May 2014 – Oct 2016</p>
-            <p class="timeline-pillar-text" data-en="First practical legal role while still studying — coordinating document workflow and direct Polish–English communication with the firm's clients and attorneys." data-pl="Pierwsza praktyczna rola prawna jeszcze w trakcie studiów — koordynacja obiegu dokumentów oraz bezpośrednia komunikacja polsko-angielska z klientami i prawnikami kancelarii.">First practical legal role while still studying — coordinating document workflow and direct Polish–English communication with the firm's clients and attorneys.</p>
+            <p class="timeline-pillar-subtitle" data-en="May 2014 - Oct 2016" data-pl="maj 2014 - październik 2016">May 2014 - Oct 2016</p>
+            <p class="timeline-pillar-text" data-en="First practical legal role while still studying — coordinating document workflow and direct Polish-English communication with the firm's clients and attorneys." data-pl="Pierwsza praktyczna rola prawna jeszcze w trakcie studiów — koordynacja obiegu dokumentów oraz bezpośrednia komunikacja polsko-angielska z klientami i prawnikami kancelarii.">First practical legal role while still studying — coordinating document workflow and direct Polish-English communication with the firm's clients and attorneys.</p>
           </div>
         </div>
         <div class="tag-list">
@@ -537,7 +566,7 @@
 
       <div class="achievement-card">
         <div class="achievement-icon">🇪🇺</div>
-        <span class="achievement-metric">100s</span>
+        <span class="achievement-metric">300+</span>
         <p class="achievement-text" data-en="Enabled hundreds of science and deeptech startups and SMEs to access EU innovation funding through comprehensive legal support — contracts, compliance, grant agreements and regulatory guidance across Horizon Europe programmes." data-pl="Umożliwienie setkom startupów i MŚP z obszaru nauki i deep tech dostępu do unijnych funduszy innowacyjnych — kompleksowa obsługa prawna: umowy, compliance, umowy grantowe i wskazówki regulacyjne w ramach programów Horizon Europe.">Enabled hundreds of science and deeptech startups and SMEs to access EU innovation funding through comprehensive legal support — contracts, compliance, grant agreements and regulatory guidance across Horizon Europe programmes.</p>
       </div>
 
@@ -620,7 +649,7 @@
           </svg>
         </div>
         <div>
-          <p class="cert-name" data-en="Skills of Tomorrow – AI in Business Development (5-week course)" data-pl="Skills of Tomorrow – AI w rozwoju biznesu (kurs 5-tygodniowy)">Skills of Tomorrow – AI in Business Development (5-week course)</p>
+          <p class="cert-name" data-en="Skills of Tomorrow - AI in Business Development (5-week course)" data-pl="Skills of Tomorrow - AI w rozwoju biznesu (kurs 5-tygodniowy)">Skills of Tomorrow - AI in Business Development (5-week course)</p>
           <p class="cert-issuer" data-en="Google &amp; SGH Warsaw School of Economics · 2025" data-pl="Google &amp; SGH Szkoła Główna Handlowa · 2025">Google &amp; SGH Warsaw School of Economics · 2025</p>
           <span
             data-en='<a href="certificate_skills_of_tomorrow_en.pdf" target="_blank" class="cert-link">View certificate</a>'
@@ -655,7 +684,7 @@
           <span class="cert-icon">🇬🇧</span>
         </div>
         <div>
-          <p class="cert-name" data-en="English Language Course – C1 Level" data-pl="Kurs języka angielskiego – poziom C1">English Language Course – C1 Level</p>
+          <p class="cert-name" data-en="English Language Course - C1 Level" data-pl="Kurs języka angielskiego - poziom C1">English Language Course - C1 Level</p>
           <p class="cert-issuer" data-en="Native English Language School · 2016" data-pl="Native English Language School · 2016">Native English Language School · 2016</p>
         </div>
       </div>
@@ -677,7 +706,7 @@
         </div>
         <div>
           <p class="cert-progress-label" data-en="In progress" data-pl="W trakcie">In progress</p>
-          <p class="cert-name">n8n – AI Agents, AI Automations &amp; AI Voice Agents</p>
+          <p class="cert-name">n8n - AI Agents, AI Automations &amp; AI Voice Agents</p>
           <p class="cert-issuer">&nbsp;</p>
         </div>
       </div>
@@ -748,7 +777,7 @@
       <!-- Reference 2: FundingBox Head of PM Department -->
       <div class="ref-card">
         <span class="ref-quote">"</span>
-        <p class="ref-period" data-en="FundingBox Accelerator · 2025–2026" data-pl="FundingBox Accelerator · 2025–2026">FundingBox Accelerator · 2025–2026</p>
+        <p class="ref-period" data-en="FundingBox Accelerator · 2025-2026" data-pl="FundingBox Accelerator · 2025-2026">FundingBox Accelerator · 2025-2026</p>
         <p class="ref-role" data-en="Head of Project Management Department" data-pl="Kierownik Działu Project Management">Head of Project Management Department</p>
         <p class="ref-quote-text" data-en="&ldquo;Working with Agata on training our project management team was a genuinely valuable experience. She has a rare ability to make complex legal and compliance topics accessible and engaging — and the team left each session with practical tools they could use straight away.&rdquo;" data-pl="&ldquo;Współpraca z Agatą przy szkoleniu naszego zespołu zarządzania projektami była naprawdę wartościowym doświadczeniem. Ma rzadką umiejętność czynienia złożonych tematów prawnych i compliance przystępnymi — i zespół po każdej sesji wychodził z praktycznymi narzędziami gotowymi do użycia.&rdquo;">&ldquo;Working with Agata on training our project management team was a genuinely valuable experience. She has a rare ability to make complex legal and compliance topics accessible and engaging — and the team left each session with practical tools they could use straight away.&rdquo;</p>
         <div class="ref-divider"></div>
@@ -759,7 +788,7 @@
         <span class="ref-quote" style="opacity:0.08">"</span>
         <p class="ref-period">BWHS · 2022</p>
         <p class="ref-role" data-en="Senior attorney-at-law" data-pl="Starszy radca prawny">Senior attorney-at-law</p>
-        <p class="ref-profile" data-en="Senior attorney-at-law with 20+ years of experience and direct supervisor throughout employment 2014–2022 — corporate law specialist, WSE-listed companies. Reference available on request." data-pl="Starszy radca prawny z ponad 20-letnim doświadczeniem i bezpośredni przełożony przez cały okres zatrudnienia 2014–2022 — specjalista prawa korporacyjnego, spółki notowane na GPW. Referencja dostępna na żądanie.">Senior attorney-at-law and direct supervisor throughout employment 2014–2022 — corporate law specialist, WSE-listed companies. Reference available on request.</p>
+        <p class="ref-profile" data-en="Senior attorney-at-law with 20+ years of experience and direct supervisor throughout employment 2014-2022 — corporate law specialist, WSE-listed companies. Reference available on request." data-pl="Starszy radca prawny z ponad 20-letnim doświadczeniem i bezpośredni przełożony przez cały okres zatrudnienia 2014-2022 — specjalista prawa korporacyjnego, spółki notowane na GPW. Referencja dostępna na żądanie.">Senior attorney-at-law and direct supervisor throughout employment 2014-2022 — corporate law specialist, WSE-listed companies. Reference available on request.</p>
         <div class="ref-divider"></div>
       </div>
 
@@ -787,6 +816,267 @@
       <span id="cv-download-wrapper"><a href="agata-odrobna-cv.pdf" download class="btn-primary">⬇ Download CV</a></span>
       <!-- Polish CV download link — to be added later: <a href="agata-odrobna-cv-pl.pdf" download class="btn-primary">⬇ Pobierz CV</a> -->
       <a href="#contact" class="btn-outline" data-en="Contact Me" data-pl="Skontaktuj się">Contact Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <p class="section-label" data-en="Frequently Asked Questions" data-pl="Najczęściej zadawane pytania">Frequently Asked Questions</p>
+    <h2 class="section-title" data-en="Questions &amp; answers." data-pl="Pytania i odpowiedzi.">Questions &amp; answers.</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="Are you open to working in Warsaw or another Polish city, even though you live in Poznan?" data-pl="Czy jesteś otwarta na pracę w Warszawie lub innym polskim mieście, mimo że mieszkasz w Poznaniu?">Are you open to working in Warsaw or another Polish city, even though you live in Poznan?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>Poznan is currently my home base, so I'm open to working with companies from Warsaw or other cities, but only in a remote or hybrid model - with the option of visiting the office once or twice a week.</p></div>
+          <div class="lang-pl"><p>Obecnie moim centrum życiowym jest Poznań, dlatego jestem otwarta na pracę dla firm z Warszawy i innych miast wyłącznie w formule zdalnej lub hybrydowej - z możliwością pojawiania się w biurze raz lub dwa razy w tygodniu.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="Are you interested in remote or hybrid work?" data-pl="Czy interesuje Cię praca zdalna lub hybrydowa?">Are you interested in remote or hybrid work?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>Yes, I prefer a remote or hybrid model - for the past four years I've worked at a fully remote company, so I have solid experience organizing my work effectively in that setup.</p></div>
+          <div class="lang-pl"><p>Tak, preferuję model zdalny lub hybrydowy - przez ostatnie cztery lata pracowałam w firmie działającej w pełni zdalnie, więc mam duże doświadczenie w efektywnej organizacji pracy w takim modelu.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="Are you looking for employment under an employment contract, or are you considering other forms of cooperation?" data-pl="Czy szukasz zatrudnienia na umowę o pracę, czy też rozważasz inne formy współpracy?">Are you looking for employment under an employment contract, or are you considering other forms of cooperation?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>My main goal is employment under a standard employment contract, though I'm open to other forms of cooperation as well.</p></div>
+          <div class="lang-pl"><p>Zależy mi przede wszystkim na zatrudnieniu na umowę o pracę, choć nie wykluczam również innych form współpracy.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="Since when have you been a licensed attorney-at-law, and with which bar are you registered?" data-pl="Od kiedy jesteś czynnym radcą prawnym i w jakiej izbie jesteś zarejestrowana?">Since when have you been a licensed attorney-at-law, and with which bar are you registered?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>I've been a licensed attorney-at-law since 2021, registered with the Regional Bar of Legal Advisors in Poznan (reg. no. PZ-5142).</p></div>
+          <div class="lang-pl"><p>Jestem czynnym radcą prawnym od 2021 roku, wpisaną na listę Okręgowej Izby Radców Prawnych w Poznaniu (nr wpisu PZ-5142).</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="What experience do you have in corporate law and compliance?" data-pl="Jakie masz doświadczenie w prawie korporacyjnym i compliance?">What experience do you have in corporate law and compliance?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en">
+            <p>I have over 12 years of experience in corporate law and compliance. My work has included:</p>
+            <ul>
+              <li>supporting the management board, supervisory board and shareholders,</li>
+              <li>preparing resolutions, minutes and corporate documentation,</li>
+              <li>handling changes in the National Court Register (KRS) and equivalent foreign registers,</li>
+              <li>preparing powers of attorney,</li>
+              <li>advising the management board on obligations under company law,</li>
+              <li>drafting and updating internal policies,</li>
+              <li>implementing new regulations (e.g. AI, ESG, AML, sanctions, whistleblowing),</li>
+              <li>delivering training for employees,</li>
+              <li>assessing legal risk and reviewing business processes for compliance,</li>
+              <li>conducting internal investigations,</li>
+              <li>preparing pleadings in disputes.</li>
+            </ul>
+          </div>
+          <div class="lang-pl">
+            <p>Mam ponad 12 lat doświadczenia w prawie korporacyjnym i compliance. Zajmowałam się m.in.:</p>
+            <ul>
+              <li>obsługą zarządu, rady nadzorczej oraz wspólników/akcjonariuszy,</li>
+              <li>przygotowywaniem uchwał, protokołów i dokumentacji korporacyjnej,</li>
+              <li>zmianami w KRS oraz odpowiednich rejestrach zagranicznych,</li>
+              <li>przygotowywaniem pełnomocnictw,</li>
+              <li>doradztwem dla zarządu w zakresie obowiązków wynikających z prawa spółek,</li>
+              <li>tworzeniem i aktualizacją polityk wewnętrznych,</li>
+              <li>wdrażaniem nowych regulacji (np. AI, ESG, AML, sankcje, whistleblowing),</li>
+              <li>prowadzeniem szkoleń dla pracowników,</li>
+              <li>oceną ryzyka prawnego i opiniowaniem procesów biznesowych pod kątem zgodności,</li>
+              <li>prowadzeniem wewnętrznych postępowań wyjaśniających,</li>
+              <li>przygotowywaniem pism w sporach.</li>
+            </ul>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="What did you do as Legal Coordinator at FundingBox Accelerator?" data-pl="Czym zajmowałaś się jako Legal Coordinator w FundingBox Accelerator?">What did you do as Legal Coordinator at FundingBox Accelerator?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>I handled the legal aspects of Horizon Europe projects with budgets of €2-4M, supporting deep tech startups. My work focused mainly on preparing and implementing the full cycle of documentation related to cascading funding - from documents serving as instructions for open calls for deep tech startups, through agreements between my company and beneficiaries, to agreements between consortium partners running these projects, including their negotiation. I also handled identifying and resolving conflict-of-interest issues throughout the projects.</p></div>
+          <div class="lang-pl"><p>Prowadziłam aspekty prawne projektów Horizon Europe o budżetach 2-4 mln euro, wspierając startupy deep tech. Moja praca koncentrowała się głównie na przygotowaniu i wdrażaniu pełnego cyklu dokumentacji związanej z finansowaniem kaskadowym - od dokumentów będących instrukcją dla otwartych naborów dla startupów deep tech, przez umowy między moją firmą a beneficjentami, po umowy między partnerami konsorcjów realizujących te projekty, w tym ich negocjowanie. Zajmowałam się również rozpatrywaniem i rozwiązywaniem kwestii konfliktu interesów na przestrzeni całych projektów.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="What experience do you have with European programmes (e.g. Horizon Europe)?" data-pl="Jakie masz doświadczenie z programami europejskimi (np. Horizon Europe)?">What experience do you have with European programmes (e.g. Horizon Europe)?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>For several years I've provided legal support to hundreds of science and tech startups accessing Horizon Europe funding. I know the full lifecycle of this kind of European programme and the guidelines of the funding institutions, which allows me to prepare documents that are fully compliant with their requirements - from grant agreements to ongoing formal compliance.</p></div>
+          <div class="lang-pl"><p>Przez kilka lat wspierałam prawnie setki startupów naukowo-technologicznych korzystających z finansowania Horizon Europe. Znam pełen cykl życia takiego programu europejskiego oraz wytyczne instytucji finansujących, dzięki czemu potrafię przygotowywać dokumenty w pełni zgodne z ich wymogami - od umów grantowych po bieżącą zgodność formalną.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="Do you have experience delivering training for companies?" data-pl="Czy masz doświadczenie w prowadzeniu szkoleń dla firm?">Do you have experience delivering training for companies?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>Yes, I independently designed and delivered training on AI, compliance, data protection and information security. For the 45-person team I ran two online sessions, while for the smaller group of 15 people I delivered a 10-hour in-person training, rated 5/5 by all participants.</p></div>
+          <div class="lang-pl"><p>Tak, samodzielnie zaprojektowałam i przeprowadziłam szkolenia z AI, compliance, ochrony danych i bezpieczeństwa informacji. Dla zespołu 45-osobowego przeprowadziłam dwa szkolenia online, natomiast dla mniejszej grupy 15 osób - 10-godzinne szkolenie stacjonarne, ocenione przez wszystkich uczestników na 5/5.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="What AI tools do you use in your daily legal work?" data-pl="Jakie narzędzia AI wykorzystujesz w codziennej pracy prawniczej?">What AI tools do you use in your daily legal work?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>Day to day I use OpenAI tools, Google Gemini and Claude, and for sensitive data - LM Studio, running local AI models offline. I'm also learning the basics of AI-assisted coding (Claude Code). I built this website myself, and I'm currently working on further solutions to automate my work.</p></div>
+          <div class="lang-pl"><p>Na co dzień korzystam z narzędzi OpenAI, Google Gemini i Claude, a do pracy z wrażliwymi danymi - z LM Studio, czyli lokalnych modeli AI działających offline. Uczę się też podstaw kodowania wspieranego przez AI (Claude Code). Samodzielnie stworzyłam tę stronę, na której teraz się znajdujesz, a obecnie pracuję nad kolejnymi rozwiązaniami automatyzującymi moją pracę.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="Do you have experience working with international teams?" data-pl="Czy masz doświadczenie w pracy z międzynarodowymi zespołami?">Do you have experience working with international teams?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>Yes, I work daily with FundingBox's international team of around 100 people, as well as with foreign partners on Horizon Europe projects.</p></div>
+          <div class="lang-pl"><p>Tak, na co dzień współpracuję z międzynarodowym, ok. 100-osobowym zespołem FundingBox, a także z zagranicznymi partnerami w ramach projektów Horizon Europe.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="What is your level of English and German?" data-pl="Jaki jest Twój poziom znajomości języka angielskiego i niemieckiego?">What is your level of English and German?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>I speak English at an advanced (C1) level, which allows me to work and communicate comfortably in that language - on video calls and in preparing documents. I speak German at a basic (A2) level - enough for simple small talk or ordering a coffee, though I haven't used it professionally. If needed, I'd be happy to refresh and develop it further.</p></div>
+          <div class="lang-pl"><p>Angielski znam na poziomie C1 (zaawansowanym), co pozwala mi swobodnie pracować i komunikować się w tym języku - zarówno podczas rozmów wideo, jak i przy przygotowywaniu dokumentów. Niemiecki znam na poziomie podstawowym A2 - wystarczającym do prostej rozmowy o pogodzie czy zamówienia kawy, ale nie miałam okazji pracować w tym języku zawodowo. Jeśli zajdzie taka potrzeba, chętnie odświeżę i rozwinę tę znajomość.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="What is your experience in developing policies and procedures within an organisation?" data-pl="Jak wygląda Twoje doświadczenie w tworzeniu polityk i procedur w organizacji?">What is your experience in developing policies and procedures within an organisation?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>I developed and implemented organisation-wide confidentiality and data security frameworks at FundingBox, covering the entire ~100-person international team. I also took part as a team member in creating and implementing other similar internal policies and procedures.</p></div>
+          <div class="lang-pl"><p>Opracowałam i wdrożyłam w FundingBox kompleksowe ramy dotyczące poufności i bezpieczeństwa danych, obejmujące cały ok. 100-osobowy, międzynarodowy zespół. Brałam również udział jako członkini zespołu w tworzeniu i wdrażaniu innych podobnych polityk i procedur wewnętrznych.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="What is your experience in court proceedings / litigation?" data-pl="Jakie masz doświadczenie sądowe / w postępowaniach sądowych?">What is your experience in court proceedings / litigation?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>As a trainee and later a licensed attorney, I conducted and supported commercial court proceedings, representing clients and preparing lawsuits, replies and other pleadings. Over the past four years I haven't appeared in court as legal counsel, but I still hold full qualifications to do so.</p></div>
+          <div class="lang-pl"><p>Jako aplikantka i radca prawny prowadziłam i wspierałam postępowania przed sądami gospodarczymi, reprezentując klientów oraz przygotowując pozwy, odpowiedzi i pisma procesowe. Przez ostatnie cztery lata nie występowałam w sądzie jako pełnomocnik, jednak nadal posiadam do tego pełne kwalifikacje.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="Are you interested in working in another EU country, or only in Poland?" data-pl="Czy jesteś zainteresowana pracą w innym kraju UE, czy tylko w Polsce?">Are you interested in working in another EU country, or only in Poland?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>I'm definitely interested in working for a company based in another EU country - though this would only be possible in a fully (100%) remote arrangement. My current job, which I've held for four years, follows a similar model: the company is based in Poland but is part of a group with many international branches, and our work is entirely remote.</p></div>
+          <div class="lang-pl"><p>Jak najbardziej jestem zainteresowana pracą dla firmy z siedzibą w innym kraju Unii Europejskiej - możliwe byłoby to jednak wyłącznie w formule w 100% zdalnej. Moja obecna praca, którą wykonuję od czterech lat, opiera się na podobnym modelu: firma ma siedzibę w Polsce, ale jest częścią grupy spółek z wieloma międzynarodowymi oddziałami, a cała nasza praca odbywa się w pełni zdalnie.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="Do you have experience working with clients outside Poland (in English)?" data-pl="Czy masz doświadczenie w pracy z klientami spoza Polski (obsługa w j. angielskim)?">Do you have experience working with clients outside Poland (in English)?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>Yes, I handle correspondence and negotiations in English with foreign partners and clients on a daily basis.</p></div>
+          <div class="lang-pl"><p>Tak, na co dzień prowadzę korespondencję i negocjacje w języku angielskim z zagranicznymi partnerami i klientami.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="Is your AI experience just theoretical, or have you actually implemented these tools in a company?" data-pl="Czy Twoje doświadczenie w AI to tylko teoria, czy realnie wdrażałaś te narzędzia w firmie?">Is your AI experience just theoretical, or have you actually implemented these tools in a company?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>Definitely hands-on practice - I introduced and progressively built AI tools into daily legal work, speeding up document review, legal research and compliance monitoring.</p></div>
+          <div class="lang-pl"><p>Zdecydowanie praktyka - samodzielnie wprowadziłam i stopniowo rozwijałam narzędzia AI w codziennej pracy prawnej, przyspieszając przegląd dokumentów, research prawny i monitoring zgodności.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="Do you have experience negotiating with funding institutions (e.g. EU grants)?" data-pl="Czy masz doświadczenie w negocjacjach z instytucjami finansującymi (np. granty UE)?">Do you have experience negotiating with funding institutions (e.g. EU grants)?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>Yes, I directly negotiated agreements concluded within consortia running Horizon Europe projects, ensuring full compliance with the funding institutions' requirements.</p></div>
+          <div class="lang-pl"><p>Tak, bezpośrednio negocjowałam umowy zawierane w ramach konsorcjów realizujących projekty Horizon Europe, dbając o pełną zgodność z wymogami instytucji finansujących.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="Did your AI training also cover security and ethics, or just practical tool use?" data-pl="Czy Twoje przeszkolenie z AI obejmowało też aspekty bezpieczeństwa i etyki, czy tylko praktyczne użycie narzędzi?">Did your AI training also cover security and ethics, or just practical tool use?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>Definitely both - my training and practice combine practical AI use with data security, confidentiality and compliance with professional ethics. As an attorney-at-law, I've never treated security and ethics as secondary - in my work with AI tools I consider them just as important as functionality itself.</p></div>
+          <div class="lang-pl"><p>Zdecydowanie oba aspekty - moje szkolenia i praktyka łączą praktyczne użycie AI z bezpieczeństwem danych, poufnością i zgodnością z zasadami etyki zawodowej. Jako radca prawny nigdy nie traktowałam bezpieczeństwa i etyki jako kwestii drugorzędnej - w mojej pracy z narzędziami sztucznej inteligencji są one dla mnie równie istotne, co sama funkcjonalność narzędzi.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="Do you have experience working in an international / multicultural team?" data-pl="Czy masz doświadczenie w pracy w środowisku międzynarodowym / wielokulturowym zespole?">Do you have experience working in an international / multicultural team?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>Yes, I work in FundingBox's international environment, collaborating daily with people from different countries and cultures.</p></div>
+          <div class="lang-pl"><p>Tak, pracuję w międzynarodowym środowisku FundingBox, współpracując z osobami z różnych krajów i kultur na co dzień.</p></div>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="Besides law and AI, are you also interested in soft-skills training - given your ENFJ-T profile and Gallup strengths?" data-pl="Czy oprócz prawa i AI interesujesz się też szkoleniami miękkimi - biorąc pod uwagę Twój profil ENFJ-T i mocne strony Gallupa?">Besides law and AI, are you also interested in soft-skills training - given your ENFJ-T profile and Gallup strengths?</span>
+          <span class="faq-chevron">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div class="lang-en"><p>Yes, my personality type (ENFJ-T) and Gallup strengths - Communication, Positivity, Developer - naturally draw me toward people-focused work. Outside of work, I have a strong personal interest in interpersonal communication and psychology, particularly topics related to children's emotional development and psyche.</p></div>
+          <div class="lang-pl"><p>Tak, moja osobowość (ENFJ-T) i mocne strony Gallupa - komunikacja, pozytywne nastawienie, umiejętność rozwijania innych - naturalnie prowadzą mnie w stronę pracy z ludźmi. Prywatnie z zamiłowaniem interesuję się komunikacją interpersonalną oraz tematami psychologicznymi, szczególnie w kontekście emocjonalności i psychiki dzieci.</p></div>
+        </div></div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -838,10 +1128,21 @@
     document.querySelectorAll('[data-ph-en]').forEach(el => {
       el.placeholder = el.getAttribute(`data-ph-${lang}`) || el.placeholder;
     });
+    document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+    document.querySelectorAll('.lang-pl').forEach(el => el.style.display = lang === 'pl' ? '' : 'none');
     const cvBtn = document.getElementById('cv-download-wrapper');
     if (cvBtn) cvBtn.style.display = lang === 'en' ? 'inline' : 'none';
     document.documentElement.lang = lang;
   }
+
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+    });
+  });
 
   document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
