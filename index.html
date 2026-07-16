@@ -814,9 +814,8 @@
     <h2 class="section-title" data-en="Want the full picture?" data-pl="Chcesz zobaczyć całość?">Want the full picture?</h2>
     <p class="download-sub" data-en="Download my CV as a PDF or get in touch directly." data-pl="Pobierz moje CV w formacie PDF lub skontaktuj się bezpośrednio.">Download my CV as a PDF or get in touch directly.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <!-- English CV download link -->
       <span id="cv-download-wrapper"><a href="agata-odrobna-cv.pdf" download class="btn-primary">⬇ Download CV</a></span>
-      <!-- Polish CV download link — to be added later: <a href="agata-odrobna-cv-pl.pdf" download class="btn-primary">⬇ Pobierz CV</a> -->
+      <span id="cv-download-wrapper-pl" style="display:none;"><a href="agata-odrobna-cv-pl.pdf" download class="btn-primary">⬇ Pobierz CV</a></span>
       <a href="#contact" class="btn-outline" data-en="Contact Me" data-pl="Skontaktuj się">Contact Me</a>
     </div>
   </div>
@@ -1134,6 +1133,8 @@
     document.querySelectorAll('.lang-pl').forEach(el => el.style.display = lang === 'pl' ? 'block' : 'none');
     const cvBtn = document.getElementById('cv-download-wrapper');
     if (cvBtn) cvBtn.style.display = lang === 'en' ? 'inline' : 'none';
+    const cvBtnPl = document.getElementById('cv-download-wrapper-pl');
+    if (cvBtnPl) cvBtnPl.style.display = lang === 'pl' ? 'inline' : 'none';
     document.documentElement.lang = lang;
   }
 
