@@ -1164,14 +1164,20 @@
       from_email: form.from_email.value,
       message: form.message.value
     }).then(function() {
+      const isPl = document.documentElement.lang === 'pl';
       status.className = 'form-status success';
-      status.textContent = "Your message has been sent — I'll get back to you soon!";
+      status.textContent = isPl
+        ? 'Wiadomość została wysłana — odezwę się wkrótce!'
+        : "Your message has been sent — I'll get back to you soon!";
       form.reset();
       btn.disabled = false;
       btn.textContent = originalText;
     }, function() {
+      const isPl = document.documentElement.lang === 'pl';
       status.className = 'form-status error';
-      status.textContent = 'Something went wrong. Please try again or contact me via LinkedIn.';
+      status.textContent = isPl
+        ? 'Coś poszło nie tak. Spróbuj ponownie lub skontaktuj się przez LinkedIn.'
+        : 'Something went wrong. Please try again or contact me via LinkedIn.';
       btn.disabled = false;
       btn.textContent = originalText;
     });
