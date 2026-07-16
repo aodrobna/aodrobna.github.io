@@ -1130,8 +1130,8 @@
     document.querySelectorAll('[data-ph-en]').forEach(el => {
       el.placeholder = el.getAttribute(`data-ph-${lang}`) || el.placeholder;
     });
-    document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
-    document.querySelectorAll('.lang-pl').forEach(el => el.style.display = lang === 'pl' ? '' : 'none');
+    document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+    document.querySelectorAll('.lang-pl').forEach(el => el.style.display = lang === 'pl' ? 'block' : 'none');
     const cvBtn = document.getElementById('cv-download-wrapper');
     if (cvBtn) cvBtn.style.display = lang === 'en' ? 'inline' : 'none';
     document.documentElement.lang = lang;
